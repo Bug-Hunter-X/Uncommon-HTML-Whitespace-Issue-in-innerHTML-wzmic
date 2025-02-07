@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to modify an element's content when it is not properly initialized
+    document.getElementById('myDiv').innerHTML = "<p>This text replaces the previous content.</p><p> This paragraph has a space before it.</p>";
+
+    //This will cause the browser to render the second paragraph incorrectly because it contains a space at the start
+    //Also this is not common because most programmer avoids using innerHTML to update the content of the elements instead of this they use textContent
+    
+  </script>
+</body>
+</html>
