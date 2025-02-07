@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Correctly using innerHTML to modify an element's content by removing leading space
+    document.getElementById('myDiv').innerHTML = "<p>This text replaces the previous content.</p><p>This paragraph now renders correctly.</p>"; 
+  </script>
+</body>
+</html>
